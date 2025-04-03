@@ -1,0 +1,413 @@
+
+:root {
+  --color-bg: #69F7BE;
+  --color-text-main: #000000;
+  --color-text-header: #2800FF;
+  --color-primary: #FFFF00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+/* Our remix on glitch button */
+/* .btn--remix {
+  font-family: HK Grotesk;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 2.75rem;
+  align-items: center;
+  cursor: pointer;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.btn--remix img {
+  margin-right: 0.1rem;
+}
+.btn--remix:hover {
+  background-color: #D0FFF1;
+} */
+
+.btn {
+  background-color: #524B7B;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}
+
+
+/* Navigation grid */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+  color : black;
+}
+
+.footer a:not(.btn--remix):link,
+a:not(.btn--remix):visited {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  border-style: none;
+}
+.footer a:hover {
+  background: var(--color-primary);
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  
+  font-family: 'Inter', sans-serif;
+  background-color: ;
+  text-align : left;
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+}
+img {
+  height : 500px;
+  width : 750px;
+  border-radius : 10px;
+}
+#ing {
+  height : 700px;
+  width : 1200px;
+  border-radius: 10px;
+    
+}
+#unl {
+  height: 550px;
+  width: 1700px;
+  border-radius: 10px;
+}
+#mit {
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+}
+#worth{
+  height: 800px;
+  width: 1200px;
+  border-radius: 10px;
+}
+
+/* Very light scaling for our illustration */
+.title {
+  font-size: 3.5rem; /* Large, bold font */
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff; /* White text */
+  background: linear-gradient(45deg, #0072ff, #00c6ff);
+  padding: 20px 40px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0px 10px 25px rgba(0, 114, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Adding a glowing border effect */
+.title::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #00c6ff, #0072ff, #00c6ff);
+  z-index: -1;
+  border-radius: 20px;
+  filter: blur(15px);
+  opacity: 0.7;
+}
+
+/* Hover effect */
+.title:hover {
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* Very light scaling for our illustration */
+.illustration {
+  max-width: 100%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+}
+
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+}
+
+/* Button - Add it from the README instructions */
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  background: #db190b;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+  color : white;
+  margin : 0 auto;
+}
+
+/* Subheading */
+h2 {
+  color : #86BBC3;
+  font-size : 35px;
+  margin-left : 0px;
+  
+}
+p{ 
+  
+  font-size : 20px;}
+
+/* Interactive image */
+.illustration:active {
+  transform: translateY(5px);
+}
+
+.mitolyn-link {
+  color: #cc0000;
+  text-decoration: none;
+}
+
+.mitolyn-link:hover {
+  color: green;
+}
+
+h3 {
+  position: relative;
+  padding-left: 10px;
+  color : #26802f;
+  font-size : 25px;
+  font-weight: normal;
+}
+
+h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background-color: green;
+}
+
+li {
+  font-size : 20px;
+  padding : 10px;
+}
+
+
+/* Button dip
+- Toggling this class on and off will move it down and up again
+- The button transition property above determines the speed of the translate (500ms)
+*/
+.dipped {
+  transform: translateY(5px);
+}
+
+/* Links that open files in the editor */
+.fileopener {
+  cursor:pointer;
+  font-weight:bold;
+  border-bottom:3px solid var(--color-primary);
+  color: var(--color-secondary);
+}
+.fileopener:hover {
+  border-bottom:3px solid var(--color-secondary);
+}
+
+/* From Uiverse.io by gharsh11032000 */ 
+.button {
+  position: relative;
+  width: 500px;
+  height: 60px;
+/*   background-color: #86BBC3; */
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size : 25px;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 510px;
+  height: 70px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.button:hover::after {
+  filter: blur(30px);
+}
+
+.button:hover::before {
+  transform: rotate(-180deg);
+}
+
+.button:active::before {
+  scale: 0.7;
+}
+
+
+
+/* lastbutton */
+
+/* From Uiverse.io by dalbrechtmartin */ 
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+  align-items: center;
+/*   background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb); */
+  background-color : black;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size : 25px;
+}
+
+button:active,
+button:hover {
+  outline: 0;
+}
+
+button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+button:hover span {
+  background: none;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+
